@@ -3,7 +3,7 @@ package javier.casal
 // nivel en el que se encuentra el ascensor
 var nivel_actual: Int = 0
 // estado actual del ascensor
-var estado_acual: Estados = Estados.Idle
+var estado_actual: Estados = Estados.Idle
 
 var nivel_destino : Int = 0
 var fallo: Boolean = false
@@ -14,7 +14,7 @@ var nivel_1: Boolean = false
  * Gestiona el cambio de estados
  */
 fun gestor(): Int {
-    when (estado_acual) {
+    when (estado_actual) {
         is Estados.Idle -> {
             nivel_actual = 0
             return nivel_actual
@@ -32,4 +32,20 @@ fun gestor(): Int {
             return nivel_actual
         }
     }
+}
+
+fun gestionarIdle() {
+    if (fallo) {
+        estado_actual = Estados.Error
+        nivel_actual = -1   //numero de error
+        return
+    }
+
+    if (nivel_actual == 0 && (nivel_1 || nivel_destino == 1)) {
+        estado_actual = Estados.MovingUP
+    }   else if (nivel_actual == 1 && (nivel_0 || nivel_destino == 0)) {
+        estado_actual = Estados.MovingDOWN
+    }
+
+
 }
