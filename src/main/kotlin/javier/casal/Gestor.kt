@@ -71,3 +71,8 @@ fun gestionarMovingDown() {
     estado_actual = Estados.Idle
     nivel_actual = 0
 }
+
+fun gestionarError() {
+    estado_actual = Estados.Error
+    nivel_actual = -1
+}
