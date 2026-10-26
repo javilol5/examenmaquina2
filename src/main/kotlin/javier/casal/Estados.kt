@@ -1,4 +1,4 @@
-package org.danielcastelao.dam
+package javier.casal
 
 sealed class Estados {
     object Idle : Estados()

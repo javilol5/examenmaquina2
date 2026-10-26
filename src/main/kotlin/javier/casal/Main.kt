@@ -1,13 +1,13 @@
-package org.danielcastelao.dam
+package javier.casal
 
     fun main() {
 
-        println("1-  Idle")
+        println("\n1-  Idle")
 
-        println("2-  Bajando")
+        println("\n2-  Bajando")
 
-        println("3-  Subiendo")
+        println("\n3-  Subiendo")
 
-        println("4-  Error")
+        println("\n4-  Error")
 
     }
