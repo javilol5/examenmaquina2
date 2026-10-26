@@ -91,4 +91,16 @@ class GestorTest {
         assertEquals(0, resultado)
         assertEquals(0, nivel_actual)
     }
+
+    @Test
+    fun `test Idle-Error`() {
+        estado_actual = Estados.Idle
+        fallo = true
+
+        val resultado = gestor()
+
+        assertEquals(Estados.Error, estado_actual)
+        assertEquals(-1, resultado)
+        assertEquals(-1, nivel_actual)
+    }
 }
