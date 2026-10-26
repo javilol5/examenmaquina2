@@ -76,3 +76,13 @@ fun gestionarError() {
     estado_actual = Estados.Error
     nivel_actual = -1
 }
+
+//to_string
+fun Estados.aTexto(): String {
+    return when (this) {
+        is Estados.Idle -> "Idle"
+        is Estados.MovingUP -> "MovingUP"
+        is Estados.MovingDOWN -> "MovingDOWN"
+        is Estados.Error -> "Error"
+    }
+}
