@@ -11,6 +11,7 @@ package javier.casal
 
         println("\n2-  Bajando")
         nivel_0 = true
+        gestor()
         println("Estado: ${estado_actual.aTexto()}, Nivel actual: $nivel_actual")
         gestor()
         println("Estado: ${estado_actual.aTexto()}, Nivel actual: $nivel_actual")
@@ -18,6 +19,7 @@ package javier.casal
 
         println("\n3-  Subiendo")
         nivel_1 = true
+        gestor()
         println("Estado: ${estado_actual.aTexto()}, Nivel actual: $nivel_actual")
         gestor()
         println("Estado: ${estado_actual.aTexto()}, Nivel actual: $nivel_actual")
