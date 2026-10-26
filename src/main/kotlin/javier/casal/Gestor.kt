@@ -1,9 +1,14 @@
-package org.danielcastelao.dam
+package javier.casal
 
 // nivel en el que se encuentra el ascensor
 var nivel_actual: Int = 0
 // estado actual del ascensor
 var estado_acual: Estados = Estados.Idle
+
+var nivel_destino : Int = 0
+var fallo: Boolean = false
+var nivel_0: Boolean = false
+var nivel_1: Boolean = false
 
 /**
  * Gestiona el cambio de estados
