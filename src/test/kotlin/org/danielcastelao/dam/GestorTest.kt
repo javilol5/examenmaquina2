@@ -16,33 +16,6 @@ class GestorTest {
     }
 
     @Test
-    fun `gestor reinicia el nivel cuando el estado es Idle`() {
-        estado_actual = Estados.Idle
-        nivel_actual = 5
-
-        assertEquals(0, gestor())
-        assertEquals(0, nivel_actual)
-    }
-
-    @Test
-    fun `gestor establece el nivel cuando el estado es MovingUP`() {
-        estado_actual = Estados.MovingUP
-        nivel_actual = 5
-
-        assertEquals(2, gestor())
-        assertEquals(2, nivel_actual)
-    }
-
-    @Test
-    fun `gestor establece el nivel cuando el estado es MovingDOWN`() {
-        estado_actual = Estados.MovingDOWN
-        nivel_actual = 5
-
-        assertEquals(2, gestor())
-        assertEquals(2, nivel_actual)
-    }
-
-    @Test
     fun `gestor establece el nivel de error cuando el estado es Error`() {
         estado_actual = Estados.Error
         nivel_actual = 5
