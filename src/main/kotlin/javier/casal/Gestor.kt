@@ -47,5 +47,27 @@ fun gestionarIdle() {
         estado_actual = Estados.MovingDOWN
     }
 
+}
 
+
+fun gestionarMovingUp() {
+    if (fallo) {
+        estado_actual = Estados.Error
+        nivel_actual = -1
+        return
+    }
+    nivel_actual == 2
+    estado_actual = Estados.Idle
+    nivel_actual = 1
+}
+
+fun gestionarMovingDown() {
+    if (fallo) {
+        estado_actual = Estados.Error
+        nivel_actual = -1
+        return
+    }
+    nivel_actual == 2
+    estado_actual = Estados.Idle
+    nivel_actual = 0
 }
