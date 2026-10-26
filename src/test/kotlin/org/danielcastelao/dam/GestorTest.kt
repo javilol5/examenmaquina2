@@ -115,4 +115,16 @@ class GestorTest {
         assertEquals(-1, resultado)
         assertEquals(-1, nivel_actual)
     }
+
+    @Test
+    fun `test MovingDOWN-Error`() {
+        estado_actual = Estados.MovingDOWN
+        fallo = true
+
+        val resultado = gestor()
+
+        assertEquals(Estados.Error, estado_actual)
+        assertEquals(-1, resultado)
+        assertEquals(-1, nivel_actual)
+    }
 }
