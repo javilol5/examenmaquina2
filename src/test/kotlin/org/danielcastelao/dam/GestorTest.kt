@@ -23,4 +23,26 @@ class GestorTest {
         assertEquals(-1, gestor())
         assertEquals(-1, nivel_actual)
     }
+
+    @Test
+    fun `test Idle-MovingUP por nivel_1`() {
+        estado_actual = Estados.Idle
+        nivel_actual = 0
+        nivel_1 = true
+
+        gestor()
+
+        assertEquals(Estados.MovingUP, estado_actual)
+    }
+
+    @Test
+    fun `test Idle-MovingUP por nivel_destino 1`() {
+        estado_actual = Estados.Idle
+        nivel_actual = 0
+        nivel_destino = 1
+
+        gestor()
+
+        assertEquals(Estados.MovingUP, estado_actual)
+    }
 }
