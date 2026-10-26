@@ -16,22 +16,19 @@ var nivel_1: Boolean = false
 fun gestor(): Int {
     when (estado_actual) {
         is Estados.Idle -> {
-            nivel_actual = 0
-            return nivel_actual
+            gestionarIdle()
         }
         is Estados.MovingUP -> {
-            nivel_actual = 2
-            return nivel_actual
+            gestionarMovingUp()
         }
         is Estados.MovingDOWN -> {
-            nivel_actual = 2
-            return nivel_actual
+            gestionarMovingDown()
         }
         is Estados.Error -> {
-            nivel_actual = -1
-            return nivel_actual
+            gestionarError()
         }
     }
+    return nivel_actual
 }
 
 fun gestionarIdle() {
@@ -56,7 +53,7 @@ fun gestionarMovingUp() {
         nivel_actual = -1
         return
     }
-    nivel_actual == 2
+    nivel_actual = 2
     estado_actual = Estados.Idle
     nivel_actual = 1
 }
@@ -67,7 +64,7 @@ fun gestionarMovingDown() {
         nivel_actual = -1
         return
     }
-    nivel_actual == 2
+    nivel_actual = 2
     estado_actual = Estados.Idle
     nivel_actual = 0
 }
